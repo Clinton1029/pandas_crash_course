@@ -32,3 +32,18 @@ print(df.iloc[0])  # Selecting a row by index
 print(df.loc[df['Age'] > 25])  # Filtering rows
 
 
+# 5. Adding & Modifying Data
+print("### Adding & Modifying Data ###")
+df['Bonus'] = df['Salary'] * 0.10  # Adding a new column
+print(df, '\n')
+df.loc[1, 'Salary'] = 65000  # Modifying a value
+print(df, '\n')
+
+# 6. Handling Missing Data
+print("### Handling Missing Data ###")
+df.loc[2, 'Age'] = np.nan  # Introducing a NaN value
+print(df.isnull())  # Check for missing values
+print(df.dropna())  # Drop missing values
+print(df.fillna(df['Age'].mean()), '\n')  # Fill missing values with mean
+
+
