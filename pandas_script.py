@@ -46,4 +46,13 @@ print(df.isnull())  # Check for missing values
 print(df.dropna())  # Drop missing values
 print(df.fillna(df['Age'].mean()), '\n')  # Fill missing values with mean
 
+# 7. Grouping & Aggregation
+print("### Grouping & Aggregation ###")
+print(df.groupby('Name')['Salary'].mean(), '\n')
+
+# 8. Sorting & Ordering
+print("### Sorting & Ordering ###")
+print(df.sort_values(by='Salary', ascending=False), '\n')
+
+
 
