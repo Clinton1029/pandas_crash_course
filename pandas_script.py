@@ -16,3 +16,11 @@ print("### Reading & Writing Data ###")
 
 # df = pd.read_excel('file.xlsx')  # Reading Excel
 # df.to_excel('output.xlsx', index=False)  # Writing to Excel
+
+# 3. Inspecting Data
+print("### Inspecting Data ###")
+print(df.head())  # First 5 rows
+print(df.tail())  # Last 5 rows
+print(df.info())  # Summary of DataFrame
+print(df.describe(), '\n')  # Summary statistics
+
