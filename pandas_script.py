@@ -55,4 +55,22 @@ print("### Sorting & Ordering ###")
 print(df.sort_values(by='Salary', ascending=False), '\n')
 
 
+# 9. Merging & Joining
+print("### Merging & Joining ###")
+df2 = pd.DataFrame({'Name': ['Alice', 'Bob', 'David'], 'Department': ['HR', 'IT', 'Finance']})
+print(pd.merge(df, df2, on='Name', how='left'), '\n')
+
+# 10. Pivot Tables
+print("### Pivot Tables ###")
+df_pivot = df.pivot_table(values='Salary', index='Name', aggfunc=np.mean)
+print(df_pivot, '\n')
+
+# 11. Applying Functions
+print("### Applying Functions ###")
+def categorize_age(age):
+    return 'Young' if age < 30 else 'Old'
+df['Age Group'] = df['Age'].apply(lambda x: categorize_age(x) if pd.notnull(x) else 'Unknown')
+print(df, '\n')
+
+
 
