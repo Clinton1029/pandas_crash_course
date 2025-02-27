@@ -24,3 +24,11 @@ print(df.tail())  # Last 5 rows
 print(df.info())  # Summary of DataFrame
 print(df.describe(), '\n')  # Summary statistics
 
+# 4. Selecting Data
+print("### Selecting Data ###")
+print(df['Name'])  # Selecting a single column
+print(df[['Name', 'Age']])  # Selecting multiple columns
+print(df.iloc[0])  # Selecting a row by index
+print(df.loc[df['Age'] > 25])  # Filtering rows
+
+
