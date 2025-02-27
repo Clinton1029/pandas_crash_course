@@ -73,4 +73,15 @@ df['Age Group'] = df['Age'].apply(lambda x: categorize_age(x) if pd.notnull(x) e
 print(df, '\n')
 
 
+# 12. Time Series Handling
+print("### Time Series Handling ###")
+df['Date'] = pd.date_range(start='1/1/2024', periods=len(df), freq='D')
+print(df.set_index('Date'), '\n')
+
+# 13. Visualization
+print("### Visualization ###")
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.histplot(df['Salary'], bins=5)
+plt.show()
 
